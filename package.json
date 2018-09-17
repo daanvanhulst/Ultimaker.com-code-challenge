@@ -1,0 +1,27 @@
+{
+  "name": "ultimaker.com-code-challenge",
+  "version": "1.0.0",
+  "description": "ultimake code challenge",
+  "main": "bootstrap.ts",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "test",
+    "lint": "node_modules/.bin/eslint src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daanvanhulst/Ultimaker.com-code-challenge.git"
+  },
+  "author": "Daan van Hulst",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daanvanhulst/Ultimaker.com-code-challenge/issues"
+  },
+  "homepage": "https://github.com/daanvanhulst/Ultimaker.com-code-challenge#readme",
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "dependencies": {}
+}

@@ -1,6 +1,9 @@
-class Content {
-  constructor(contentService) {
-    this.contentService = contentService;
+const { Injectable } = require('../ioc/injectable');
+
+class Content extends Injectable {
+  constructor() {
+    super();
+    this.contentService = this.$inject('IContentService');
   }
 
   async render() {

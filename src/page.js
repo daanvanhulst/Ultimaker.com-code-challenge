@@ -1,14 +1,16 @@
-/* eslint-env browser */
+const { Injectable } = require('./ioc/injectable');
 
-class Page {
-  constructor(header, content, footer) {
-    this.header = header;
-    this.content = content;
-    this.footer = footer;
+class Page extends Injectable {
+  constructor() {
+    super();
+    this.header = this.$inject('IHeader');
+    this.content = this.$inject('IContent');
+    this.footer = this.$inject('IFooter');
+
+    console.log(this.header);
   }
 
   async render() {
-    console.log('rendering page');
     console.log(`
       ${await this.header.render()}
       ${await this.content.render()}

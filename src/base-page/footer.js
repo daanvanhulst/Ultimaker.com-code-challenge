@@ -1,7 +1,10 @@
-class Footer {
-  constructor(loginService, disclaimerService) {
-    this.loginService = loginService;
-    this.disclaimerService = disclaimerService;
+const { Injectable } = require('../ioc/injectable');
+
+class Footer extends Injectable {
+  constructor() {
+    super();
+    this.loginService = this.$inject('ILoginService');
+    this.disclaimerService = this.$inject('IDisclaimerService');
   }
 
   async render() {

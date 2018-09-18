@@ -1,6 +1,9 @@
-class Header {
-  constructor(loginService) {
-    this.loginService = loginService;
+const { Injectable } = require('../ioc/injectable');
+
+class Header extends Injectable {
+  constructor() {
+    super();
+    this.loginService = this.$inject('ILoginService');
   }
 
   async render() {
